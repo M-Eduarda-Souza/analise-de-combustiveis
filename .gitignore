@@ -1,0 +1,10 @@
+# Ignorar dados brutos e processados
+dados/
+
+# Ignorar pastas de ambiente virtual (se houver)
+.venv/
+env/
+
+# Ignorar arquivos temporários do Jupyter e Python
+.ipynb_checkpoints/
+__pycache__/
