@@ -1,116 +1,85 @@
-⛽ Inteligência de Dados para Gestão e Previsão de Preços de Combustíveis
+# Inteligência de Dados para Gestão e Previsão de Preços de Combustíveis
 
 Projeto acadêmico interdisciplinar desenvolvido para as disciplinas de Visualização de Dados e Aprendizado de Máquina Supervisionado, da Universidade Federal da Paraíba (UFPB).
 
 O projeto tem como objetivo desenvolver uma solução de apoio à tomada de decisão para a gestão e o acompanhamento dos preços de combustíveis, utilizando dados públicos da Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP), técnicas de análise e visualização de dados e modelos de aprendizado de máquina supervisionado.
 
-📌 Sobre o projeto
+## 1. Sobre o projeto
 
 O projeto foi desenvolvido a partir de uma demanda apresentada pela empresa Forno Nobre, que atua no setor de panificação, produção e distribuição de alimentos.
 
-O demandante, Moacir, gerente de uma das filiais, é responsável por acompanhar os custos relacionados aos combustíveis utilizados nas atividades da unidade e repassar essas informações ao proprietário e CEO da empresa, Jader.
+O demandante, Moacir, gerente de uma das filiais, é responsável por acompanhar os custos relacionados aos combustíveis utilizados nas atividades da unidade e repassar essas informações à administração da empresa.
 
-A partir dessa necessidade, surgiu a proposta de desenvolver uma solução que permita organizar, analisar e visualizar informações sobre os preços dos combustíveis, além de utilizar modelos preditivos para estimar valores e auxiliar no planejamento.
+A partir dessa necessidade, surgiu a proposta de desenvolver uma solução que permita organizar, analisar e visualizar informações sobre os preços dos combustíveis, além de utilizar modelos de regressão para estimar valores e auxiliar no planejamento.
 
-A solução integra duas áreas da Ciência de Dados:
+O projeto contempla duas áreas da Ciência de Dados:
 
-Visualização de Dados: organização, exploração e apresentação de informações por meio de análises, indicadores e visualizações que facilitem a interpretação dos dados.
+*Visualização de Dados:* organização, exploração e apresentação de informações por meio de análises, indicadores e visualizações.
 
-Aprendizado de Máquina Supervisionado: desenvolvimento e avaliação de modelos de regressão capazes de estimar preços de combustíveis a partir de características disponíveis na base histórica.
+*Aprendizado de Máquina Supervisionado:* desenvolvimento e avaliação de modelos de regressão capazes de estimar preços de combustíveis a partir das características disponíveis na base histórica.
 
-🎯 Objetivos
+## 2. Objetivos
 
-Objetivo geral
+### Objetivo geral
 
 Desenvolver uma solução de inteligência de dados para apoiar o acompanhamento e o planejamento dos custos com combustíveis, utilizando dados públicos, técnicas de visualização e modelos de aprendizado de máquina supervisionado.
 
-Objetivos específicos
+### Objetivos específicos
 
-Obter e organizar dados públicos de preços de combustíveis disponibilizados pela ANP.
+- Obter e organizar dados públicos de preços de combustíveis disponibilizados pela ANP.
+- Realizar auditoria e análise da qualidade dos dados.
+- Identificar e tratar inconsistências, duplicidades e valores ausentes.
+- Estruturar uma base analítica para utilização nas análises.
+- Explorar os dados por meio de estatísticas e visualizações.
+- Analisar diferenças de preços entre produtos, localidades e períodos.
+- Desenvolver um modelo de regressão para estimar preços de combustíveis.
+- Comparar o desempenho do modelo com abordagens de referência (baselines).
+- Avaliar os resultados por meio de métricas de erro e diagnóstico dos resíduos.
+- Fornecer informações que possam auxiliar o acompanhamento dos preços e o planejamento financeiro da organização.
 
-Realizar auditoria e análise da qualidade dos dados.
-
-Identificar e tratar inconsistências, duplicidades e valores ausentes.
-
-Estruturar uma base analítica para utilização nas análises.
-
-Explorar os dados por meio de estatísticas e visualizações.
-
-Desenvolver uma estrutura de análise que facilite a interpretação da variação dos preços.
-
-Construir modelos de regressão para estimar preços de combustíveis.
-
-Comparar o desempenho dos modelos com abordagens de referência (baselines).
-
-Avaliar os resultados por meio de métricas de erro e diagnóstico dos resíduos.
-
-Fornecer informações que possam auxiliar o acompanhamento dos preços e o planejamento financeiro da organização.
-
-🗂️ Fonte de dados
+## 3. Fonte de dados
 
 A principal fonte utilizada no projeto é a Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP), por meio de seus arquivos públicos de séries históricas de preços de combustíveis.
 
-Fonte oficial:
+*Fonte oficial:* [Série Histórica de Preços de Combustíveis — ANP](https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis?utm_source=chatgpt.com)
 
-https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis
+*Período analisado:* janeiro de 2024 a junho de 2026.
 
-Os dados apresentam informações relacionadas aos preços de revenda de combustíveis em diferentes localidades e períodos, permitindo realizar análises sobre o comportamento dos preços ao longo do tempo.
+Os dados apresentam informações relacionadas aos preços de revenda de combustíveis em diferentes localidades e períodos.
 
-Período analisado: janeiro de 2024 a junho de 2026.
+Os arquivos utilizados são públicos e não incluem informações financeiras internas ou registros individuais de abastecimento da empresa.
 
-Os dados utilizados são públicos e não incluem informações financeiras internas ou registros individuais de abastecimento da empresa.
+As orientações para localizar os dados utilizados estão disponíveis em:
 
-🔎 Etapas de desenvolvimento
+dados_usados/onde_encontrar.txt
 
-O desenvolvimento do projeto foi organizado em etapas, desde a obtenção dos dados até a avaliação dos resultados do modelo.
+## 4. Auditoria e preparação dos dados
 
-1. Obtenção e exploração dos dados
-
-Inicialmente, foram obtidos os arquivos disponibilizados pela ANP. Em seguida, foi realizada uma exploração inicial para compreender a estrutura da base, suas dimensões, variáveis, tipos de dados e características gerais.
-
-2. Auditoria e preparação dos dados
-
-Foi realizada uma auditoria para identificar problemas de qualidade e preparar a base para as análises e a modelagem.
+Inicialmente, foram obtidos os arquivos disponibilizados pela ANP. Em seguida, foi realizada uma exploração para identificar as características da base e possíveis problemas de qualidade.
 
 Entre os procedimentos realizados, destacam-se:
 
-Verificação de registros duplicados.
+- Verificação de registros duplicados.
+- Identificação de valores ausentes.
+- Verificação de valores inválidos.
+- Padronização dos nomes das colunas.
+- Adequação dos tipos de dados.
+- Organização das informações temporais.
+- Preparação das variáveis utilizadas na modelagem.
 
-Identificação de valores ausentes.
+### Resultado da auditoria
 
-Verificação de valores inválidos.
-
-Padronização dos nomes das colunas.
-
-Adequação dos tipos de dados.
-
-Organização das informações temporais.
-
-Preparação das variáveis utilizadas na modelagem.
-
-Resultado da auditoria:
-
-Descrição
-
-Quantidade
-
-Registros iniciais
-
-2.134.685
-
-Registros finais
-
-2.125.555
-
-Registros removidos
-
-9.130
+| Descrição | Quantidade |
+|---|---:|
+| Registros iniciais | 2.134.685 |
+| Registros finais | 2.125.555 |
+| Registros removidos | 9.130 |
 
 Entre os problemas identificados, destacam-se 9.129 registros duplicados e uma ocorrência removida por apresentar inconsistência relacionada à data ou ao preço.
 
 Também foram identificadas variáveis com elevada quantidade de informações ausentes, como Valor de Compra e Complemento.
 
-3. Visualização e análise dos dados
+## 5. Visualização e análise dos dados
 
 Na disciplina de Visualização de Dados, o projeto contempla a organização e apresentação das informações para facilitar a compreensão do comportamento dos preços dos combustíveis.
 
@@ -118,272 +87,300 @@ A exploração dos dados permite observar características da base, comparar cat
 
 As visualizações e análises exploratórias são apoiadas pela utilização de Python, Pandas e Matplotlib.
 
-A proposta de aplicação é transformar os dados em informações úteis para o acompanhamento dos preços e a elaboração de análises que apoiem as decisões da organização.
+Os materiais gráficos disponíveis no repositório estão organizados na pasta:
 
-4. Desenvolvimento do aprendizado de máquina supervisionado
+docs/graficos/
 
-Na disciplina de Aprendizado de Máquina Supervisionado, foi desenvolvido um problema de regressão, utilizando como variável-alvo o preço de venda do combustível (valor_de_venda).
+## 6. Aprendizado de Máquina Supervisionado
 
-O primeiro modelo implementado foi o Decision Tree Regressor (Árvore de Decisão para Regressão).
+O problema foi estruturado como uma tarefa de regressão, utilizando como variável-alvo o preço de venda do combustível, representado pela coluna valor_de_venda.
 
-Foram utilizadas como variáveis preditoras:
+O primeiro modelo implementado foi uma Árvore de Decisão para Regressão (DecisionTreeRegressor).
 
-Variáveis categóricas:
+### 6.1. Variáveis preditoras
 
-Região (regiao_sigla);
+*Variáveis categóricas:*
 
-Estado (estado_sigla);
+- Região (regiao_sigla)
+- Estado (estado_sigla)
+- Produto (produto)
+- Bandeira (bandeira)
+- Tipo de bandeira (tipo_bandeira)
 
-Produto (produto);
+*Variáveis numéricas:*
 
-Bandeira (bandeira);
+- Ano da coleta (ano_coleta)
+- Mês da coleta (mes_coleta)
 
-Tipo de bandeira (tipo_bandeira).
+A preparação das variáveis foi organizada utilizando Pipeline e ColumnTransformer, com tratamento de valores ausentes, padronização de variáveis numéricas e codificação das variáveis categóricas por meio de OneHotEncoder.
 
-Variáveis numéricas:
+### 6.2. Configuração do modelo
 
-Ano da coleta (ano_coleta);
+| Parâmetro | Configuração |
+|---|---|
+| Algoritmo | DecisionTreeRegressor |
+| Profundidade máxima | 10 |
+| Semente aleatória | 42 |
+| Validação cruzada | TimeSeriesSplit |
+| Número de divisões | 5 |
 
-Mês da coleta (mes_coleta).
+A configuração inicial não passou por uma busca automatizada de hiperparâmetros.
 
-A preparação das variáveis foi organizada utilizando Pipeline e ColumnTransformer, com imputação de valores ausentes e codificação das variáveis categóricas por meio de OneHotEncoder.
+## 7. Particionamento e validação
 
-Configuração do modelo:
+Foi utilizada uma divisão cronológica dos dados, respeitando a ordem temporal dos registros.
 
-Algoritmo: DecisionTreeRegressor.
-
-Profundidade máxima: 10 (max_depth=10).
-
-Semente aleatória: 42 (random_state=42).
-
-5. Particionamento e validação
-
-Para avaliar o desempenho do modelo de acordo com a ordem temporal dos registros, foi utilizada uma divisão cronológica dos dados:
-
-Treinamento: 70%.
-
-Validação: 15%.
-
-Teste: 15%.
+| Conjunto | Proporção aproximada | Período |
+|---|---:|---|
+| Treinamento | 70% | 01/01/2024 a 01/10/2025 |
+| Validação | 15% | 02/10/2025 a 16/02/2026 |
+| Teste | 15% | 17/02/2026 a 30/06/2026 |
 
 Também foi realizada validação cruzada temporal utilizando TimeSeriesSplit, com cinco divisões.
 
-Esse procedimento permite avaliar o comportamento do modelo em diferentes períodos, respeitando a sequência temporal dos dados e evitando a utilização de informações futuras no treinamento.
+A avaliação final foi realizada no conjunto de teste, separado dos dados utilizados no treinamento.
 
-6. Avaliação dos modelos
+## 8. Baselines
 
-Foram utilizadas abordagens de referência (baselines) para estabelecer parâmetros de comparação com o modelo supervisionado.
+Foram utilizadas duas abordagens de referência para comparar o desempenho do modelo supervisionado.
 
-As métricas utilizadas foram:
+*Baseline trivial:* utiliza a média da variável-alvo calculada a partir do conjunto de treinamento para gerar previsões constantes.
 
-MAE (Mean Absolute Error): mede o erro absoluto médio entre os valores reais e previstos.
+*Baseline operacional proposto:* utiliza a mediana histórica do preço de venda por estado e produto, calculada com os dados de treinamento, com uma referência global para situações sem correspondência.
 
-RMSE (Root Mean Squared Error): mede a raiz do erro quadrático médio, atribuindo maior peso aos erros mais elevados.
+O baseline operacional representa uma regra de referência proposta para o projeto, não um procedimento de previsão já utilizado pela empresa.
 
-Também foi realizado o diagnóstico dos resíduos, permitindo observar a distribuição dos erros e identificar possíveis tendências de superestimação ou subestimação dos preços.
+## 9. Avaliação dos resultados
 
-📊 Resultados obtidos
+Foram utilizadas duas métricas de avaliação:
 
-Na avaliação realizada sobre o conjunto de teste, foram obtidos os seguintes resultados:
+- *MAE (Mean Absolute Error):* erro absoluto médio entre os valores reais e previstos.
+- *RMSE (Root Mean Squared Error):* raiz do erro quadrático médio, que atribui maior peso aos erros mais elevados.
 
-Modelo
+O MAE foi adotado como métrica principal por permitir interpretar diretamente a diferença média entre o preço estimado e o observado, em reais por litro.
 
-MAE (R$)
+### 9.1. Comparação dos modelos
 
-RMSE (R$)
+Os resultados obtidos no conjunto de teste foram:
 
-Baseline trivial
+| Abordagem | MAE (R$/litro) | RMSE (R$/litro) |
+|---|---:|---:|
+| Baseline trivial | 1,1393 | 1,2593 |
+| Baseline operacional proposto | 0,7124 | 0,8582 |
+| Árvore de decisão | *0,5507* | *0,6993* |
 
-1,1393
+A árvore de decisão apresentou desempenho superior aos dois baselines nas métricas utilizadas.
 
-1,2593
+Em relação ao MAE, houve uma redução aproximada de 22,7% em comparação com o baseline operacional proposto e de 51,7% em comparação com o baseline trivial.
 
-Baseline operacional
-
-0,7124
-
-0,8582
-
-Árvore de decisão
-
-0,5507
-
-0,6993
-
-Os resultados indicam que a árvore de decisão apresentou desempenho superior aos dois baselines utilizados, considerando as métricas MAE e RMSE.
+### 9.2. Validação cruzada temporal
 
 Na validação cruzada temporal, o modelo apresentou:
 
-MAE médio: R$ 0,2866.
+| Indicador | Resultado |
+|---|---:|
+| MAE médio | R$ 0,2866/litro |
+| Desvio-padrão do MAE | R$ 0,0638/litro |
 
-Desvio-padrão: R$ 0,0638.
+O MAE obtido no conjunto de teste foi superior à média observada na validação cruzada, indicando dificuldades de generalização para determinados períodos posteriores ao treinamento.
 
-Entretanto, o desempenho no conjunto de teste foi inferior ao observado na validação cruzada, indicando que o modelo ainda apresenta dificuldades para acompanhar determinadas variações dos preços em períodos posteriores ao treinamento.
+### 9.3. Diagnóstico dos resíduos
 
-Esses resultados reforçam a importância de avaliar o modelo em dados que representem períodos futuros e de considerar suas limitações antes de utilizá-lo em decisões operacionais.
+A análise dos resíduos foi utilizada para identificar padrões de erro e observações com maiores diferenças entre os valores reais e estimados.
 
-⚠️ Limitações do projeto
+Considerando o resíduo como a diferença entre o valor real e o valor previsto, foram observados os seguintes resultados:
+
+| Estatística | Resultado |
+|---|---:|
+| Média dos resíduos | 0,4502 |
+| Mediana dos resíduos | 0,4099 |
+| Desvio-padrão | 0,5351 |
+| Maior erro absoluto | 3,7099 |
+
+A predominância de resíduos positivos indica tendência de subestimação dos preços no conjunto de teste.
+
+Uma das observações com maior erro apresentou preço real de R$ 9,99/litro e previsão aproximada de R$ 6,28/litro.
+
+Esses resultados mostram que o modelo ainda apresenta limitações para representar determinadas variações de preços.
+
+## 10. Limitações do projeto
 
 Apesar dos resultados obtidos, algumas limitações precisam ser consideradas:
 
-Os dados utilizados representam preços de revenda pesquisados pela ANP e não necessariamente os valores efetivamente pagos pela empresa.
-
-A variável Valor de Compra apresenta 100% de valores ausentes na base auditada.
-
-O modelo utiliza informações geográficas e temporais gerais, sem identificar individualmente os estabelecimentos.
-
-As variáveis utilizadas não contemplam informações específicas sobre consumo, rotas, abastecimentos e despesas da filial.
-
-O modelo utiliza ano e mês como características temporais, sem incorporar diretamente tendências recentes ou históricos de preços anteriores.
-
-O desempenho apresentou redução no conjunto de teste em comparação com a validação cruzada.
-
-A configuração inicial da árvore de decisão não passou por uma busca automatizada de hiperparâmetros.
+- Os dados representam preços de revenda pesquisados pela ANP, não necessariamente os valores efetivamente pagos pela empresa.
+- A variável Valor de Compra apresenta 100% de valores ausentes na base auditada.
+- O modelo utiliza informações geográficas e temporais gerais, sem identificar individualmente os estabelecimentos.
+- As variáveis não contemplam informações específicas sobre consumo, rotas, abastecimentos e despesas da filial.
+- O modelo utiliza ano e mês como características temporais, sem incorporar diretamente históricos recentes de preços.
+- Embora a demanda original considere decisões com horizonte semanal, o modelo atual estima preços de registros individuais, não realizando uma previsão semanal propriamente dita.
+- O desempenho no conjunto de teste foi inferior ao observado na validação cruzada.
+- A configuração inicial da árvore de decisão não passou por otimização automatizada de hiperparâmetros.
 
 Dessa forma, os resultados devem ser interpretados como uma ferramenta inicial de apoio à análise dos preços, não como garantia de economia ou previsão exata dos custos da organização.
 
-🛠️ Tecnologias e ferramentas
+## 11. Tecnologias utilizadas
 
-As principais tecnologias utilizadas no desenvolvimento e na análise dos dados são:
+| Tecnologia | Aplicação |
+|---|---|
+| Python | Linguagem principal do projeto |
+| Pandas | Manipulação e análise dos dados |
+| NumPy | Operações numéricas |
+| Matplotlib | Construção de visualizações |
+| Scikit-learn | Desenvolvimento e avaliação dos modelos |
+| Jupyter Notebook | Desenvolvimento e execução das análises |
+| ANP | Fonte pública dos dados |
 
-Tecnologia
+## 12. Estrutura do repositório
 
-Aplicação
+A organização dos arquivos publicados segue a estrutura abaixo:
 
-Python
-
-Linguagem principal do projeto
-
-Pandas
-
-Manipulação e análise dos dados
-
-NumPy
-
-Operações numéricas
-
-Matplotlib
-
-Construção de visualizações
-
-Scikit-learn
-
-Desenvolvimento e avaliação dos modelos de aprendizado de máquina
-
-Jupyter Notebook
-
-Desenvolvimento, documentação e execução das análises
-
-ANP
-
-Fonte pública dos dados
-
-📁 Estrutura do projeto
-
-A organização do repositório segue a seguinte estrutura proposta:
-
-projeto-combustiveis/
+text
+analise-de-combustiveis/
 │
-├── dados/
-│   ├── bruto/
-│   │   └── arquivos_originais_ANP.csv
-│   │
-│   └── processado/
-│       └── base_tratada.csv
-│
-├── notebooks/
-│   └── auditoria_dados_corrigido.ipynb
+├── dados_usados/
+│   └── onde_encontrar.txt
 │
 ├── docs/
-│   └── relatorios_e_documentacao/
+│   ├── graficos/
+│   ├── E03_LeticiaSousa_MariaEduardaSouza_escuta_canvas (1).pdf
+│   └── E04_LeticiaSousa_MariaEduardaSouza_dados_baseline.pdf
 │
-├── src/
-│   └── funcoes.py
+├── notebooks/
+│   └── auditoria_dados.ipynb
 │
-├── README.md
+├── .gitignore
 │
-└── requirements.txt
+└── README.md
 
-A estrutura apresenta a organização dos arquivos do projeto. Os nomes dos arquivos e diretórios devem corresponder aos efetivamente presentes no repositório.
 
-▶️ Como executar o projeto
+A pasta dados_usados contém orientações relacionadas à obtenção dos dados utilizados.
+
+A pasta docs reúne a documentação acadêmica e os materiais gráficos do projeto.
+
+A pasta notebooks contém o notebook de auditoria, preparação, modelagem e avaliação.
+
+## 13. Como executar o projeto
 
 Para reproduzir as análises, é necessário possuir Python instalado e um ambiente capaz de executar notebooks Jupyter.
 
-1. Clonar o repositório
+### 13.1. Clonar o repositório
 
-git clone URL_DO_REPOSITORIO
+bash
+git clone https://github.com/M-Eduarda-Souza/analise-de-combustiveis.git
 
-2. Entrar na pasta do projeto
 
-cd projeto-combustiveis
+### 13.2. Acessar a pasta do projeto
 
-3. Instalar as bibliotecas necessárias
+bash
+cd analise-de-combustiveis
 
+
+### 13.3. Instalar as bibliotecas
+
+bash
 pip install pandas numpy matplotlib scikit-learn jupyter
 
-4. Disponibilizar os dados
 
-Os arquivos CSV originais da ANP devem ser colocados na pasta:
+Caso o notebook utilize bibliotecas adicionais, elas também deverão ser instaladas.
 
-dados/bruto/
+### 13.4. Obter os dados
 
-Os arquivos devem manter o formato esperado pelo notebook, incluindo o separador de colunas utilizado na leitura dos dados (;).
+Consultar o arquivo:
 
-5. Executar o notebook
+text
+dados_usados/onde_encontrar.txt
 
+
+Os arquivos originais podem ser obtidos na página de séries históricas de preços de combustíveis da ANP.
+
+Antes de executar o notebook, é necessário disponibilizar os arquivos de dados nos caminhos utilizados pelas células de leitura.
+
+Os arquivos devem preservar o formato esperado pelo código, incluindo o separador de colunas utilizado na leitura dos dados.
+
+### 13.5. Executar o notebook
+
+Na pasta do repositório, executar:
+
+bash
 jupyter notebook
 
-Em seguida, abrir o notebook de auditoria e modelagem disponível na pasta notebooks/ e executar as células sequencialmente.
 
-Observação: a execução depende da disponibilidade dos arquivos de dados originais ou de suas versões processadas, conforme os caminhos utilizados no notebook.
+Em seguida, abrir o arquivo:
 
-🔮 Possibilidades de evolução
+text
+notebooks/auditoria_dados.ipynb
+
+
+Executar as células sequencialmente, desde a leitura dos dados até a avaliação do modelo.
+
+*Observação:* a execução depende da disponibilidade dos arquivos originais da ANP e da correspondência entre os caminhos utilizados no notebook e a localização dos arquivos no ambiente de execução.
+
+## 14. Documentação acadêmica
+
+O repositório reúne documentos desenvolvidos ao longo das entregas do projeto.
+
+*Entrega 3 — Escuta do demandante e Canvas de ML*
+
+Documento referente ao levantamento da demanda, à identificação do problema e à estruturação inicial da proposta.
+
+*Entrega 4 — Dados e baseline*
+
+Documento referente à preparação dos dados, à auditoria e à construção das abordagens iniciais de referência.
+
+*Entrega 5 — Pacote da Avaliação 1*
+
+Relatório de consolidação da decisão, formulação, dados, partição, baselines, modelo supervisionado, avaliação, diagnóstico e limitações.
+
+O relatório final da Entrega 5 deverá ser incluído na pasta docs após sua conclusão.
+
+## 15. Possibilidades de evolução
 
 Como continuidade do projeto, algumas melhorias podem ampliar a utilidade da solução:
 
-Desenvolver um painel interativo de BI para acompanhamento dos preços.
+- Desenvolver um painel interativo de BI para acompanhamento dos preços.
+- Incorporar informações mais específicas sobre localidades e estabelecimentos.
+- Testar outros algoritmos de regressão e realizar otimização de hiperparâmetros.
+- Incorporar variáveis históricas para melhorar a capacidade de previsão temporal.
+- Utilizar dados internos de abastecimento da Forno Nobre, caso haja autorização e disponibilidade.
+- Desenvolver estimativas de despesas futuras a partir do histórico real de consumo da empresa.
+- Comparar previsões com os valores efetivamente observados ao longo do tempo.
 
-Incorporar informações mais específicas sobre localidades e estabelecimentos.
-
-Testar outros algoritmos de regressão e realizar otimização de hiperparâmetros.
-
-Incorporar variáveis históricas para melhorar a capacidade de previsão temporal.
-
-Utilizar dados internos de abastecimento da Forno Nobre, caso haja autorização e disponibilidade.
-
-Desenvolver estimativas de despesas futuras a partir do histórico real de consumo da empresa.
-
-Comparar previsões com os valores efetivamente observados ao longo do tempo.
-
-👥 Equipe
+## 16. Equipe
 
 Projeto desenvolvido por:
 
-Letícia Sousa
+- Letícia Sousa
+- Maria Eduarda Souza
+- Marina Moraes
 
-Maria Eduarda Souza
+*Instituição:* Universidade Federal da Paraíba (UFPB).
 
-Marina Moraes
+*Curso:* Ciência de Dados para Negócios.
 
-Instituição: Universidade Federal da Paraíba (UFPB)
+*Disciplinas:*
+- Visualização de Dados.
+- Aprendizado de Máquina Supervisionado.
 
-Disciplinas:
+*Período:* 2026.2.
 
-Visualização de Dados.
+## 17. Uso de Inteligência Artificial
 
-Aprendizado de Máquina Supervisionado.
+Durante o desenvolvimento do projeto, foi utilizado o ChatGPT, da OpenAI, como ferramenta de apoio à organização das etapas do trabalho, à compreensão do funcionamento do modelo de aprendizado de máquina e à interpretação das exigências das entregas.
 
-Período: 2026.2
+A ferramenta também auxiliou na identificação e correção de erros durante a implementação do código, além de contribuir para a organização e revisão dos textos e da documentação.
 
-📚 Referências
+As sugestões fornecidas foram analisadas pela equipe, que permaneceu responsável pelas decisões tomadas, pela implementação e pela conferência dos resultados apresentados.
 
-AGÊNCIA NACIONAL DO PETRÓLEO, GÁS NATURAL E BIOCOMBUSTÍVEIS (ANP). Série Histórica de Preços de Combustíveis. Disponível em: https://www.gov.br/anp/pt-br/centrais-de-conteudo/dados-abertos/serie-historica-de-precos-de-combustiveis.
+## 18. Referências
 
-SCIKIT-LEARN. Machine Learning in Python. Documentação oficial. Disponível em: https://scikit-learn.org/.
+*Agência Nacional do Petróleo, Gás Natural e Biocombustíveis (ANP).* Série Histórica de Preços de Combustíveis. Disponível no portal oficial da ANP.
 
-PANDAS. Python Data Analysis Library. Documentação oficial. Disponível em: https://pandas.pydata.org/.
+*Scikit-learn.* Machine Learning in Python. Documentação oficial.
 
-MATPLOTLIB. Visualization with Python. Documentação oficial. Disponível em: https://matplotlib.org/.
+*Pandas.* Python Data Analysis Library. Documentação oficial.
+
+*Matplotlib.* Visualization with Python. Documentação oficial.
+
+---
 
 Projeto acadêmico desenvolvido para fins de estudo, análise de dados e aplicação de técnicas de aprendizado de máquina supervisionado.
