@@ -1,4 +1,4 @@
-⛽Inteligência de Dados para Gestão e Previsão de Preços de Combustíveis
+⛽ Inteligência de Dados para Gestão e Previsão de Preços de Combustíveis
 
 Projeto acadêmico interdisciplinar desenvolvido para as disciplinas de Visualização de Dados e Aprendizado de Máquina Supervisionado, da Universidade Federal da Paraíba (UFPB).
 
